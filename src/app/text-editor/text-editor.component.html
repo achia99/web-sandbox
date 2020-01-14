@@ -1,0 +1,17 @@
+<div>
+
+    <select #colorSelect (change)="colorChange(colorSelect)">
+        <option value="black">black</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="blue">blue</option>
+    </select>
+
+    <select #sizeSelect (change)="fontChange(sizeSelect)">
+        <option *ngFor="let num of genFontSizes(14)" value="{{num}}">{{num}}</option>
+    </select>
+
+    <button (click)="leftToRight()">leftToRight</button>
+    <button (click)="rightToLeft()">rightToLeft</button>
+
+</div>
